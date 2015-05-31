@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6yo-cE-rtU">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <scenes>
+        <!--Happiness View Controller-->
+        <scene sceneID="Z9K-4K-sgO">
+            <objects>
+                <viewController id="6yo-cE-rtU" customClass="HappinessViewController" customModule="SmilyFace" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CDa-bQ-w9a"/>
+                        <viewControllerLayoutGuide type="bottom" id="omb-8D-ZIH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RSG-5S-Ykz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="VnD-3y-zSA" customClass="FaceView" customModule="SmilyFace" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="faceRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="scale">
+                                        <real key="value" value="0.90000000000000002"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VnD-3y-zSA" firstAttribute="leading" secondItem="RSG-5S-Ykz" secondAttribute="leading" id="2s5-dU-8Nb"/>
+                            <constraint firstItem="VnD-3y-zSA" firstAttribute="top" secondItem="RSG-5S-Ykz" secondAttribute="top" id="BnS-7T-8bp"/>
+                            <constraint firstAttribute="trailing" secondItem="VnD-3y-zSA" secondAttribute="trailing" id="bnC-r1-Fad"/>
+                            <constraint firstItem="VnD-3y-zSA" firstAttribute="bottom" secondItem="omb-8D-ZIH" secondAttribute="top" id="hRB-rS-5dN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="faceView" destination="VnD-3y-zSA" id="M6P-wG-Msq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ixp-Ju-WYh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="513" y="438"/>
+        </scene>
+    </scenes>
+</document>
